@@ -26,31 +26,18 @@ router.get('/', (req, res) => {
     })
     .then(response => {
         if (response.status === 200) {
-          const {access_token, refresh_token} = response.data;
+          const {access_token, refresh_token, expires_in} = response.data;
 
-          axios({
-              method: 'put',
-              url: PUT_PLAYER_ENDPOINT,
-              headers: {
-                Authorization: `Bearer ${access_token}` 
-              },
-              data: {
-                  "context_uri": 'spotify:playlist:37i9dQZF1DZ06evO4kqwHC',
-                  'offset': {
-                    'position': 0
-                  },
-                  'position_ms': 0
-              }
-            })
-            .then(response => {
-                res.send(`<pre>${JSON.stringify(response.data, null, 2)}</pre>`);
-            })
-            .catch(error => {
-                res.send(error);
-            });
+          const urlParams = new URLSearchParams([
+                ['access_token', access_token],
+                ['refresh_token', refresh_token],
+                ['expires_in', expires_in]
+            ]).toString();
+
+            res.redirect(`http://localhost:3000/?${urlParams}`);
         } 
         else {
-          res.send(response);
+          res.redirect(`/?${new URLSearchParams(['error', 'invalid_token']).toString()}`)
         }
       })
       .catch(error => {
