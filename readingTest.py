@@ -79,13 +79,12 @@ URIDict = {
         "1409188206": "spotify:album:4PgleR09JVnm3zY1fW3XBA", #Bruno Mars - 24K Magic
         "63101233": "spotify:playlist:37i9dQZF1DZ06evO4kqwHC", #This is Foo Fighters Playlist
         "691031433": "spotify:album:5zi7WsKlIiUXv09tbGLKsE", #Tyler the Creator - IGOR
-        "157441223": "spotify:playlist:37i9dQZF1DZ06evO4nOT7i", #This is Rex Orange County Playlist
+        "157441223": "spotify:album:2yI4m5Yu2tl8v0It5P9WVz", #Rex Orange County - Who Cares?
         "72491443": "spotify:album:5PrhnVNOKoJC2aLLfabxuB", #Surfaces - Pacifico
         "253341443": "spotify:album:6pwuKxMUkNg673KETsXPUV", #Kanye West - Kids See Ghosts
         "182951433" : "spotify:album:5SxudoALxEAVh9l83kSebx", #Florence and the Machine - Ceremonials
         "1092411223" : "spotify:album:76290XdXVF9rPzGdNRWdCh",  #SZA - Ctrl
         "2351443" : "spotify:album:2fYhqwDWXjbpjaIJPEfKFw" #Ariana Grande - Thank u, next
-
 }
 
 authorizeUsage()
